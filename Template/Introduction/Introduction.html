@@ -1,0 +1,254 @@
+<!doctype html>
+
+<!--
+
+This is my first presentation using impress.js
+It should be an introduction to my research so far, and is a combination of playing with impress.js and sumerising some work
+-->
+
+<!--
+
+The first section of this sets up most of the backing of the presentation.
+The title and description of things are all put here.
+The backup is also setup for incompatable browsers
+
+-->
+
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Presentation 1 | By Ben Newsome</title>
+
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Ben Newsome" />
+
+	<link href="css/impress-demo.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/substep.css">
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+	<p>Your browser doesn't support the features required by impress.js, so you are presented with a simple version of this presentation.</p>
+	<p>For the best experience please use the latest <b>Chrome</B>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+
+<!--
+The following bit sets up the main parts.
+Each step of the presentation should be an element inside the '#impress' with a class name of 'step'.
+These step elements are positioned, rotated and scaled by impress.js,
+and the 'camera shows them on each step of the presentation.
+
+Positioning information is passed through data attributes.
+
+For the position, the x, y and z positions can be placed, though z is optional. 
+The specified position is the CENTER of the element.
+-->
+
+<div id="impress">
+	<div id="title" class="step slide" data-x="0" data-y="0">
+		<h1> A Presentation </h1>
+		<!-- include QR Here -->
+		<center>
+			<a href="http://goo.gl/RlvxJU">
+			<img align=center src="img/QR.png" width="500" height="500" alt="QR code">
+			</a>
+			<a href="http://goo.gl/RlvxJU"><p> http://goo.gl/RlvxJU </p></a>
+		</center>
+		<footer align=center> By Ben Newsome </footer>
+	</div>
+
+
+	<div id="York" class="step" data-x="-800" data-y="1500" data-rotate="-90"  data-scale="4">
+		<a href="http://www.york.ac.uk"><img src="img/UoY.png" width="800" height="120" alt="York"></a>
+	</div>
+
+	<div id="NCAS" class="step" data-x="3700" data-y="500" data-rotate="90" data-scale="2">
+		<a href="http://www.ncas.ac.uk"><img src="img/NCAS.jpg" width="800" height="200" alt="ncas"</img></a>
+	</div>
+
+	<div id="NERC" class="step" data-x="3700" data-y="2500" data-rotate="90" data-scale="2">
+		<a href="http://www.nerc.ac.uk"><img src="img/NERC.jpg" width="800" height="200" alt="nerc"</img></a>
+	</div>
+
+
+<!-- Slide two -->
+
+	<div id="Resolution" class="step slide" data-x="1000" data-y="0">
+		<h1> Typical simulation of Ozone production </h1>
+		<center>
+			<!-- Insert ozone plot -->
+			<img align=center src="img/GlobalMap.png" width="720" height="540" alt="Global map of Ozone at low resolution"> 
+		</center>
+	</div>
+	
+	<div id="Highres" class="step" data-x="1000" data-y="-140" data-scale="0.07">
+		<p style="color:red;font-size:100px" class="substep">Large gridboxs can encompase a veriety of different areas</p>
+	</div>
+	
+	<div id="NOx" class="step slide" data-x="2000" data-y="0">
+		<h1> Imagin this scinario <br><br><br><h1>
+		<!-- Insert Factory gif -->
+		<img src="img/factory.gif" width="400" height="300" alt="A factory">
+		<!-- Insert forrest -->
+		<img align=right src="img/forrest.jpg" width="400" height="300" alt="A forest">
+		<table width="100%">
+		<tr>
+		<td class="substep" align=left><p> High NOx from pollution </p></td>
+		<td class="substep" align=right><p> Low NOx from Forrest </p></td>
+		</table>
+		</tr>
+	</div>		
+	
+	<div id="low-res" class="step slide" data-x="3000" data-y="0">
+		<h1> The Chemistry </h1>
+		<center><img src="img/ozone_production_voc.gif" width="800" height="600" alt="Graph showing non-linear realtion between ozone and NOx"></center>
+	</div>
+	
+	<div id="Ozone" class="step slide" data-x="3000" data-y="1000">
+		<h1> Ozone Production </h1>
+		<center><img src="img/ozone_nox_voc.jpg" width="600" height="500" alt="Graph showing non-linear relation between ozone and NOx"></center>
+		<div style="position:absolute; left:70%; top:40%;" class="substep"><li class="brown">Pollution site</li></div>
+		<div style="position:absolute; left:30%; top:50%;" class="substep"><li class="green"> Forrest site </li></div>
+	</div>
+
+	<div id="Resolution_Dependence" class="step slide" data-x="2000" data-y="1000">
+		<h1> Resolution dependence </h1>
+		<img src="img/ozone_nox.gif" width="800" height="600" alt="Graph showing low ozone production with hight NOx">
+		<div class="substep" style="position:absolute; left:25%; top:77%;"><li class="small-green">Forrest site</li></div>
+		<div class="substep" style="position:absolute; left:85%; top:75%;"><li class="small-brown">Pollution site</li></div>
+		<div class="substep" style="position:absolute; left:57%; top:17%;"><li class="small-blue">Average</li></div>
+	</div>
+	
+	<div id="O3_vs_Res" class="step slide" data-x="1000" data-y="1000">
+		<h1> Annual budget of Ozone vs Resolution </h1>
+		<center><img src="img/ozone_vs_res.png" width="720" height="540" alt="Graph showing increased anual ozone budged as a function of resolution"></center>
+		<p class="substep"> <sup>*</sup> Fitted results </p>
+	</div>
+	
+	<div id="Res_Problems" class="step slide" data-x="0" data-y="1000">
+		<h1> Problems with increased resolution </h1>
+		<div>
+		<img align=left src="img/lowres.png" width="300" height="300" alt="low-res U.K. picture">
+		<img align=right src="img/highres.png" width="300" height="300" alt="high-res U.K picture">
+		</div><br><br><br><br><br><br><br><br><br>
+		
+		<ul>
+		<li>
+		<div class="substep"><p> An increase in resolution by factor n for a 3d grid increases computational time by n <sup>3</sup> (but parallelizes well) </p></div>
+		</li>
+		
+		<li>
+		<div class="substep"> Communication between gridboxes also increases (And doesn't parallelize well)</div>
+		</li>
+				</ul>
+		</table>
+	</div>
+
+	<div id="Profile" class="step slide" data-x="0" data-y="2000">
+		<h1> GEOS-Chem Profile </h1>
+		<img align=center src="img/profile.png" width="800" height="600" alt="Visual Profile of Geos-Chem">
+	</div>
+
+	<div id="Profile_Zoom_1" class="step" data-x="50" data-y="1800" data-scale="0.4"></div>
+
+	<div id="Profile_Zoom_2" class="step" data-x="70" data-y="1900" data-scale="0.3"></div>
+
+	<div id="Profile_Zoom_3" class="step" data-x="-140" data-y="1900" data-scale="0.3"></div>
+
+	<div id="Profile_Zoom_4" class="step" data-x="-120" data-y="2100" data-scale="0.3"></div>
+
+	<div id="Profile_Zoom_5" class="step" data-x="0" data-y="2000"></div>
+
+	<div id="Vtune" class="step slide" data-x="1000" data-y="2000">
+		<h1> Intel Vtune </h1>
+		<center>
+		<img src="img/thread_concurrency.png" width="800" height="225" alt="Vtune thread concurency of Geos-Chem">
+		<img class="substep" src="img/cpu_usage.png" width="800" height="225" alt="Vtune cpu usage of geos-chem">
+		</center>
+		<p class="substep" align=right> <sup>*</sup> Only run on 12 cores, so target efficiencys should all be halfed </p>
+	</div>
+
+	<div id="overhead" class="step slide" data-x="2000" data-y="2000">
+		<h1> OpenMP Overhead </h1>
+		<center><img src="img/omp_overhead.png" width="800" height="200" alt="OpenMP overhead"></center>
+		<div class="substep"><p>OpenMP is having to do a lot of work</p></div>
+		<center><img class="substep" src="img/omp_zoom.png" width="800" height="300" alt="OpenMP overhead zoomed in "></center>
+	</div>
+
+	<div id="improvements" class="step slide" data-x="3000" data-y="2000">
+		<h1> Ideas for improvement </h1><br>
+		<ul class="boringlist">
+		<li class=substep> Use OpenMP Tasks<br> </li><br>
+		<li class=substep> Use Checkerboard do loops <br></li>
+		<center><img class="substep" src="img/checkerboard.gif" width="600" height="300" alt="checkerboard"></center>
+		<li class=substep> Bigger loops </li>
+		</ul>
+	</div>
+
+	<div id="Chemical_Res" class="step slide" data-x="3000" data-y="3000">
+		<h1> GEOS-Chem Chemical resolution </h1>
+		<div class="substep"><center>
+			<img src="img/placeholder.png" width="720" height="540" alt="Geos-Chem chemistry map">
+			<p> Imagin a less complex version of the next slide </p>
+		</center></div>
+	</div>
+
+	<div id="MCM" class="step slide" data-x="2000" data-y="3000">
+		<h1> Master Chemical Mechanism (MCM) </h1>
+		<div class="substep"><center>
+                        <img src="img/Complexity_480.jpg" width="720" height="540" alt="Geos-Chem chemistry map">
+			<p class="substep">Sorry for the poor resoltuion</p>
+                </center></div>
+	</div>
+
+	<div id="MCM_benefits" class="step slide" data-x="1000" data-y="3000">
+		<h1> My plans for the MCM </h1><br><br>
+		<ul class="boringlist">
+		<li class=substep> A complete chemistry mehcanism could be used as a benchmark </li><br>
+		<li class=substep> A comparison of MCM to the current implimentation would be intersting </li><br>
+		<li class=substep> From the MCM we could strip down areas to see which areas are most vital, and which areas can be comprimised for computational efficiency </li>
+		</ul>
+	</div>
+
+	<div id="Acknowledgements" class="step slide" data-x="0" data-y="3000">
+		<h1> Acknowledgements </h1>
+		<ul>
+		<li> Reference 1 </li>
+		<li><a href="http://bartaz.github.io/impress.js/#/bored"> Impress.js </a></li>
+		</ul>
+	</div>
+	<div id="overview" class="step" data-x="1500" data-y="1500" data-scale="5" ></div>
+	
+	
+</div>
+
+
+<!--
+The following should all be at the bottom and nothing below here should need changing
+-->
+<div class="hint">
+	<p> Use a spacebar or arrow keys to navagate </p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+	document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

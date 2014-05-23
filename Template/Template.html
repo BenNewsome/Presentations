@@ -1,0 +1,106 @@
+<!doctype html>
+
+<!--
+
+This is a presentation for ES4. It is planed to be a poster with areas that can be zoomed in on and then talked about.
+Uses impress.js
+
+-->
+
+<!------------------------------------------------------------------------>
+
+
+<!-- The first section of this sets up most of the backing of the presentation. -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title> Presentation | By Ben Newsome </title>
+
+	<meta name="description" content="A presentation on my project with the use of impress.js"/>
+	<meta name="author" content="Ben Newsome" />
+
+<!--	<link rel="stylesheet" href="css/presentation.scc" />	-->
+	<link rel="stylesheet" href="Template/css/impress-demo.css" />
+	<link rel="stylesheet" href="Template/css/substep.css" />
+	<link rel="stylesheet" href="Template/css/impress-progress.css"> 
+
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+	<p> Your browser doesn't support the features required by impress.js, so you are presented with a simple version of the presentation. </p>
+</div>
+
+
+
+<div class="progressbar"></div><div></div>
+<!--<div class="progress"></div>-->
+
+<div id="impress">
+
+<!------------------------------------------------------------------------------------------------>
+
+
+	<div id="title" class="step" data-x="0" data-y="0" data-scale="1">
+		<h1> Title </h1>
+		<h4> By Ben Newsome </h4>
+		<h4> bn506@york.ac.uk </h4>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide1" class="step" data-x="1000" data-y="0">
+		<h2> Title 1 </h2>
+		
+		<ul class="list">
+			<li class="substep"> A point. </li><br>
+			<li class="substep"> Another point. </li>
+		</ul>
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide2" class="step" data-x="2000" data-y="0">
+		<h2> An image </h2>
+		<div style="text-align:center">
+			<img src="Template/img/placeholder.png" width="800" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="overview" class="step" data-x="1000" data-y="0" data-scale="3" >
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+</div>
+
+<!--
+The following should all be at the bottom and nothing below here should need changing
+-->
+<div class="hint">
+        <p> Use a spacebar or arrow keys to navigate </p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="Template/js/impress-progress.js"></script>
+<script src="Template/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+          
+		
+
+
+
