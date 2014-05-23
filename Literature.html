@@ -1,0 +1,255 @@
+<!doctype html>
+
+<!--
+
+This is a presentation for ES4. It is planed to be a poster with areas that can be zoomed in on and then talked about.
+Uses impress.js
+
+-->
+
+<!------------------------------------------------------------------------>
+
+
+<!-- The first section of this sets up most of the backing of the presentation. -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title> Presentation | By Ben Newsome </title>
+
+	<meta name="description" content="A presentation on my project with the use of impress.js"/>
+	<meta name="author" content="Ben Newsome" />
+
+<!--	<link rel="stylesheet" href="css/presentation.scc" />	-->
+	<link rel="stylesheet" href="Template/css/impress-demo.css" />
+	<link rel="stylesheet" href="Template/css/substep.css" />
+	<link rel="stylesheet" href="Template/css/impress-progress.css"> 
+
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+	<script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+
+
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+	<p> Your browser doesn't support the features required by impress.js, so you are presented with a simple version of the presentation. </p>
+</div>
+
+
+
+<div class="progressbar"></div><div></div>
+<!--<div class="progress"></div>-->
+
+<div id="impress">
+
+<!------------------------------------------------------------------------------------------------>
+
+
+	<div id="title" class="step" data-x="0" data-y="-1000" data-scale="1">
+		<h1> A look at how rate constant uncertainties effect atmospheric chemistry transport models </h1>
+		<h4> By Ben Newsome </h4>
+		<h4> bn506@york.ac.uk </h4>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide1" class="step" data-x="-1500" data-y="0">
+		<h2> The importance of inputs </h2>
+                <div style="text-align:center">
+                        <img src="img/geos5.jpg" width="800" height="600" alt="A Placeholder">
+                </div>
+		<h4> (GEOS-5) </h4>
+		<!-- CTM's rely on millions of inputs.
+Assimilated met data [satilitets, ground, aircraft, ships]
+Chemical species levels
+Rate equations.
+
+All these can lead to changes in the projections, so knowing things like surface ozone, which can affect crop yield and human health, are very inportant things to know
+		-->
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide2" class="step" data-x="-500" data-y="0">
+		<h2>  The Chemistry</h2>
+		
+		<h3> The Arrhenius equation </h3>
+		$$ k = A e^{-E_a / (k_B T)} $$
+                <div style="text-align:center">
+                        <img src="img/ozone_production_voc.gif" width="400" height="300" alt="A Placeholder">
+                </div>
+		<!--
+Most of the Science and therefore compute time is in the forward simulation of the chemical species in each of the gridbox's. 
+	In each of the timesteps, each of the species has to be numericaly integrated to find how the concentration of each of the species evolves. As there are on the order of 100 species that are simulated in a CTM, with many more reactions, computers must be used to evaluate the projections. 
+	To use a computer, all the rate equations must be input in a form that is understandable by a computer. For most of these reactions, the Arrhenius equation is used.
+	The Arrhenious equation takes into account the concentrations of the reactants, the rate at which they react, and the dependence of temperature of the reaction.
+	In this form, we only need two rate constants per equation, A, and E_a.
+
+		-->
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide4" class="step" data-x="500" data-y="0">
+		<h2> JPL / IUPAC </h2>
+		
+		<h3> The rate equations and errors are obtained from sources including JPL and IUPAC </h3>
+		<br>
+		<h3> This gives A, E, one standard deviation in A, and one standard deviation in E </h3>
+		<ul class="boringlist">
+			<li class="substep"> Greatest certainty at 298k so errors increase with temperature perturbation </li>
+		</ul>
+		<br>
+		<h4>  ( IUPAC, JPL ) </h4>
+
+		<!--
+To obtain A and E_a, we look in the literature at two major sources that contain atmospheric rate constants, JPL and IUPAC. 
+These contain data from a veriety of sources to get averaged rate constants, with accociated errors. 
+As most experements are calculated at room temperature (298k), this is the poine where the error is smalest, and so a slightly modified Ahhrinious equation is used in the code, to take account for an expanding error with temperature pertubation from 298k.
+As the average temperature of the atmosphere is closer to 0 degrees 273k, there can be relatively large errors when using the ahrinious equaiton constants, and some of these constants have very few measurments, leading to high deviations.
+This uncertanty can lead to uncertanties in the output of models.
+		-->
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide5" class="step" data-x="1500" data-y="000">
+		<h2> Reason for looking</h2>
+                <div style="text-align:center">
+                        <img src="img/IPCC.png" width="600" height="600" alt="A Placeholder">
+                </div>
+		<h4> (IPCC 2013) </h4>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide6" class="step" data-x="-1500" data-y="1000">
+		<h2> Reasons for Using A GCM </h2>
+		<br>
+		<ul class="boringlist">
+			<li class="substep"> Can simulate the future </li>
+			<li class="substep"> Can compare to experiment </li>
+			<li class="substep"> Help understand the Earth system </li>
+			<li class="substep"> Easier to understand and follow errors then a Earth system coupled model </li>
+		</ul> 
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide7" class="step" data-x="-500" data-y="1000">
+		<h2> GEOS-Chem </h2>
+		<br>
+		<h3> 'GEOS–Chem is a global 3-D model of atmospheric composition driven by assimilated meteorological observations from the Goddard Earth Observing System (GEOS) of the NASA Global Modeling Assimilation Office (GMAO) .  It is developed and used by research groups worldwide as a versatile tool for application to a wide range of atmospheric composition problems.' </h3> 
+		<h4> (Daniel J. Jacob et al) </h4>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide9" class="step" data-x="500" data-y="1000">
+		<h2> Methods for Looking at Rate Equation Errors</h2>
+		<ul class="boringlist">
+			<li> Theoretical </li>
+			<li> Simulation </li>
+			<li> Brute Force </li>
+		</ul> 
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide10" class="step" data-x="1500" data-y="1000">
+		<h2> Theoretical </h2>
+		<ul class="boringlist">
+			<li> For large systems of coupled differential equations, systems can be worked out that can calculate uncertainties from input parameters at time T using Fourier analysis. </li>
+			<li class='substep'> Theoretical is hard work </li>
+		</ul> 
+		<br>
+		<h4> (R.I.Cukier) </h4>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide11" class="step" data-x="-1500" data-y="2000">
+		<h2> Emulation </h2>
+		<ul class="boringlist">
+			<li> Using statistical methods, can calculate the relationship between each input parameters.</li>
+			<li> Adjoint methods </li>
+			<li> Easier to implement then Theoretical, but computationally less efficient. </li>
+		</ul> 
+		<br>
+		<h4> ( Ronald M Errico ) </h4>
+
+<!--
+@article{errico1997adjoint,
+  title={What is an adjoint model?},
+  author={Errico, Ronald M},
+  journal={Bulletin of the American Meteorological Society},
+  volume={78},
+  number={11},
+  pages={2577-2591},
+  year={1997}
+}
+
+-->
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide12" class="step" data-x="-500" data-y="2000">
+		<h2> Brute Force</h2>
+		<ul class="boringlist">
+			<li> Run the model multiple times with rate constant perturbations coded in. </li>
+			<li> Very computationally inefficient compared to other models </li>
+			<li> Easiest to implement </li>
+			<li> Good science doesn't have to be efficient science </li>
+		</ul> 
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Slide13" class="step" data-x="500" data-y="2000">
+		<h2> Conclusion </h2>
+		<ul class="boringlist">
+			<li> By Inspecting rate constant uncertainties in CTMs, we can look to see what areas of work need improving to reduce errors in the future </li>
+			<li> Can provide more accurate analysis of current CTMs </li>
+		</ul> 
+	</div>
+<!------------------------------------------------------------------------------------------------>
+        <div id="Slide14" class="step" data-x="1500" data-y="2000">
+                <h2> References </h2>
+                <h5> <b>GEOS-5</b> - http://gmao.gsfc.nasa.gov/GEOS/ </h5>
+		<h5> <b>IUPAC</b> -  Ammann, M., Cox, R. A., Crowley, J. N., Jenkin, M. E., Mellouki, A., Rossi, M. J., Troe, J., and Wallington, T. J.: Evaluated kinetic and photochemical data for atmospheric chemistry: Volume VI – heterogeneous reactions with liquid substrates, Atmos. Chem. Phys., 13, 8045-8228, doi:10.5194/acp-13-8045-2013, 2013.</h5>
+		<h5> <b>JPL</b> - Sander, Stanley Paul, et al. "Chemical kinetics and photochemical data for use in atmospheric studies evaluation number 15." (2006).</h5>
+		<h5> <b>IPCC (2013)</b> - Stocker, D. Qin. "Climate change 2013: The physical science basis." Working Group I Contribution to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change, Summary for Policymakers, IPCC (2013). </h5>
+		<h5> <b>Daniel J. Jacob et al</b> - Bey, Isabelle, et al. "Global modeling of tropospheric chemistry with assimilated meteorology: Model description and evaluation." Journal of Geophysical Research: Atmospheres (1984–2012) 106.D19 (2001): 23073-23095.</h5>
+		<h5> <b>R.I.Cukier</b> - Cukier, R. I., et al. "Study of the sensitivity of coupled reaction systems to uncertainties in rate coefficients. I Theory." The Journal of Chemical Physics 59.8 (2003): 3873-3878. </h5>
+		<h5> <b>Ronald M Errico</b> - Errico, Ronald M. "What is an adjoint model?." Bulletin of the American Meteorological Society 78.11 (1997): 2577-2591. </h5>
+        </div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="End" class="step" data-x="0" data-y="4000">
+		<h2> End </h2>
+		<ul class="boringlist">
+			<li> Any questions? </li>
+		</ul> 
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="overview" class="step" data-x="0" data-y="1000" data-scale="4" >
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+</div>
+
+<!--
+The following should all be at the bottom and nothing below here should need changing
+-->
+<div class="hint">
+        <p> Use a spacebar or arrow keys to navigate </p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="Template/js/impress-progress.js"></script>
+<script src="Template/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+          
+		
+
+
+

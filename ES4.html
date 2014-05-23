@@ -1,0 +1,262 @@
+<!doctype html>
+
+<!--
+
+This is a presentation for ES4. It is planed to be a poster with areas that can be zoomed in on and then talked about.
+Uses impress.js
+
+-->
+
+<!------------------------------------------------------------------------>
+
+
+<!-- The first section of this sets up most of the backing of the presentation. -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title> ES4 Presentation | By Ben Newsome </title>
+
+	<meta name="description" content="A presentation on my project with the use of impress.js"/>
+	<meta name="author" content="Ben Newsome" />
+
+<!--	<link rel="stylesheet" href="css/presentation.scc" />	-->
+	<link rel="stylesheet" href="Template/css/impress-demo.css" />
+	<link rel="stylesheet" href="Template/css/substep.css" />
+	<link rel="stylesheet" href="Template/css/impress-progress.css"> 
+
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+	<p> Your browser doesn't support the features required by impress.js, so you are presented with a simple version of the presentation. </p>
+</div>
+
+
+
+<div class="progressbar"></div><div></div>
+<!--<div class="progress"></div>-->
+
+<div id="impress">
+
+<!------------------------------------------------------------------------------------------------>
+
+
+	<div id="title" class="step" data-x="-500" data-y="0" data-scale="2">
+		<h1> A look at Spatial and Chemical Resolutions in Atmospheric Chemistry Transport Models </h1>
+		<h4> By Ben Newsome </h4>
+		<h4> bn506@york.ac.uk </h4>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="introduction" class="step" data-x="-1000" data-y="-2000">
+		<h2> Chemistry Transport Models </h2>
+		
+		<ul class="list">
+			<li class="substep"> Atmospheric Chemistry Transport Models are used to predict the levels of Chemicals and Aerosols in the Atmosphere. </li><br>
+			<li class="substep"> Levels of Chemical species are calculated using rate equations. </li>
+		</ul>
+
+	<div style="text-align:center">
+		<img src="img/ozone_production_voc.gif" width="700" height="300" alt="A gif of chemistry">
+	</div>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="introduction_2" class="step" data-x="0" data-y="-2000">
+		<h2> Chemistry Transport Models </h2>
+		<ul class="list">
+			<li class="substep"> Photolysis, emissions and deposition are modelled using experimental data. </li>
+			<li class="substep"> After a set time-step is complete, the chemicals are transported by wind to adjacent grid boxes. </li>
+		</ul>
+		<img src="img/Model.jpg" align="right" width="400" height="300" alt="A picture of a model" >
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="Spatial_Resolution" class="step" data-x="-2000" data-y="1000">
+		<h2> Spatial Resolution </h2>
+		<ul class="list">
+		<li class="substep"> Spatial resolution is important in global models for many reasons. <br> </li><br>
+		<li class="substep"> It allows different areas to be distinguishable. <br> </li><br>
+		<li class="substep"> It can give more accurate results. <br> </li><br>
+		</ul>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="Ozone_Production" class="step" data-x="-1000" data-y="1000">
+		<h2> Ozone production </h2>
+		<h3 class="substep"> Many species have Non-Linear dependencies. </h3>
+		<img src="img/ozone_nox_voc.jpg" width="800" height="600" alt="Ozone_vs_VOC_vs_NOx" >
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Scenario" class="step" data-x="-1000" data-y="2000">
+		<h2> Scenario </h2>
+		<h3> Take for example an area with high pollutants next to an area with low pollutants.</h3>
+		<br>
+		<img align=left  src="img/factory.gif" width="400" height="300" alt="A factory">
+		<img align=right src="img/forrest.jpg" width="400" height="300" alt="A factory">
+		<br>
+		<div class="substep">
+			<h3 class="alignleft"  style=font-size:"8px"> High NOx, Low VOCs. </h3>
+			<h3 class="alignright" style=font-size:"8px"> Low NOx, High VOCs. </h3>
+		</div>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Ox_vs_Resolution" class="step" data-x="-2000" data-y="2000">
+	<h2> Ozone dependency on Resolution </h2>
+	<img src="img/ozone_nox.gif" width="800" height="600" alt="Graph showing low ozone production with hight NOx">
+		<div class="substep" style="position:absolute; left:25%; top:77%;"><li class="small-green">Forest site</li></div>
+		<div class="substep" style="position:absolute; left:85%; top:75%;"><li class="small-brown">Pollution site</li></div>
+		<div class="substep" style="position:absolute; left:57%; top:17%;"><li class="small-blue">Average</li></div>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+
+	<div id="Resolution_Problems" class="step" data-x="-2000" data-y="3000">
+	<h2> Problems with increased resolution </h2>
+	<br>
+	<ul class="boringlist">
+		<li class="substep"><h3> Increased compute time. </h3></li>
+		<li class="substep"><h3> More data output. </h3></li>
+		<li class="substep"><h3> Higher resolution means smaller time-steps due to transport properties. </h3></li>
+	</ul>
+	<br>
+	<img align=left  src="img/highres.png" width="300" height="300" alt="A high res image">
+	<img align=right src="img/lowres.png" width="300" height="300" alt="A low res image">
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="Resolution_Expected_Results" class="step" data-x="-1000" data-y="3000">
+	<h2> Expected Results </h2>
+	<br>
+	<ul class="boringlist">
+		<li class="substep"><h3> Global Ozone Budget should change. </h3><br></li>
+		<li class="substep"><h3> Better more accurate results. </h3><br></li>
+		<li class="substep"><h3> Find out how dependant species are on resolution. </h3><br></li>
+	</ul>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Chemical_Resolution" class="step" data-x="0" data-y="1000">
+	<h2> Chemical Resolution </h2>
+	<ul class="boringlist">
+		<li class="substep"><h3> Many current atmospheric chemistry transport models only use a limited number of chemical species in a simulation. </h3><br></li>
+		<li class="substep"><h3> By increasing the number of species, more accurate results should be obtainable. </h3><br></li>
+	<div style="text-align:center">
+		<img src="img/Complexity_480.jpg" height="300px" width="400px" alt="An image of a complex network">
+	</div>	
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="MCM" class="step" data-x="1000" data-y="1000">
+	<h2> MCM </h2>
+	<h3 align=center class="substep"> <a href="http://mcm.leeds.ac.uk/MCM/home.htt">The Master Chemical Mechanism </a>
+	<h3 class="substep"> "The Master Chemical Mechanism (MCM) is a near-explicit chemical mechanism which describes the detailed gas-phase chemical processes involved in the tropospheric degradation of a series of primary emitted volatile organic compounds (VOCs). Currently, the degradation of methane and 142 non-methane VOCs is represented." </h3>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="MCM_Resolution" class="step" data-x="1000" data-y="2000">
+	<h2> MCM Resolution </h2>
+	<br>
+	<h3 class="substep"> The MCM currently contains: <h3>
+	<ul class="boringlist">
+		<li class="substep"><h3> 142 non-methane VOC's. </hr><br></li>
+		<li class="substep"><h3> About 17000 elementary reactions. </hr><br></li>
+		<li class="substep"><h3> 6700 primary, secondary and radical species. </hr><br></li>
+	</ul>
+	<div style="text-align:center">
+		<img src="img/complex_network.gif" height="300px" width="400px" alt="An image of a complex network">
+	</div>	
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="MCM_Implementation" class="step" data-x="0" data-y="2000">
+	<h2> MCM Implementation </h2>
+	<ul class="boringlist">
+		<li class="substep"><h3> Parts of the code must be updated to allow for many more species. </h3><br></li>
+		<li class="substep"><h3> Photolysis rates must be linked up with the existing code. </h3><br></li>
+		<li class="substep"><h3> Deposition rates need to be predicted. </h3><br></li>
+	</ul> 
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Lower_resolution" class="step" data-x="0" data-y="3000">
+	<h2> Lower Resolution </h2>
+	<br>
+	<ul class="boringlist">
+	<li><h3 class="substep"> The MCM scheme could be used as a benchmark. </li>
+	<li><h3 class="substep"> More computationally efficient schemes can be compared and verified.</h3></li>
+	<li><h3 class="substep"> Statistical methods can be applied to find which species have the largest and smallest effect. </h3></li>
+	<li><h3 class="substep"> New chemistry schemes can be generated. </h3></li>
+	</ul>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Expected_results" class="step" data-x="1000" data-y="3000">
+	<h2> Expected Results </h2>
+	<br>
+	<ul class="boringlist">
+	<li><h3 class="substep"> Ideally, very little will change which would mean our current models are accurate.</h3></li>
+	<br>
+	<li><h3 class="substep"> Might be able to find species or areas that need further research, either experimental or theoretical. </h3></li>
+	</ul>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="Thanks" class="step" data-x="-2000" data-y="0">
+	<img align=center src="img/UoY.png" width="100%" height="20%" alt="University of York">
+	<br>
+	<h2> Supervisors: Professor Mathew Evans  <br> 	& Professor Alastair Lewis</h2>
+	<br>
+	<img align=left  src="img/NCAS.png" width="40%" alt="A factory">
+	<img align=right src="img/NERC.jpg" width="40%" alt="A factory">
+	</div>
+<!------------------------------------------------------------------------------------------------>
+
+	<div id="References" class="step" data-x="1000" data-y="0">
+	<div style="text-align:center">
+		<a href="http://goo.gl/llmJa0"><img align="middle" src="img/QR.png" width="600px" height="600px" alt="QR code"></a>
+	</div>
+	<div style="text-align:center">	
+		<a href="http://goo.gl/llmJa0">goo.gl/llmJa0 </a>
+	</div>
+	<h2> Thanks for listening </h2>
+	</div>
+<!------------------------------------------------------------------------------------------------>
+
+	<div id="background" class="step" data-x="-500" data-y="1500" data-z="-30" data-scale="5" style="text-align:center">
+	<img src="img/Background.png" width="800px" height="800px" alt="Background image" style="opacity:0.2;filter:alpha(opacity=20);">
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="overview" class="step" data-x="-500" data-y="1500" data-scale="5" >
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+</div>
+
+<!--
+The following should all be at the bottom and nothing below here should need changing
+-->
+<div class="hint">
+        <p> Use a spacebar or arrow keys to navigate </p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="Template/js/impress-progress.js"></script>
+<script src="Template/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+          
+		
+
+
+
