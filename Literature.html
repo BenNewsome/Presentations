@@ -30,6 +30,9 @@ Uses impress.js
 	<link rel="shortcut icon" href="icon.png" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
+        <script type="text/javascript" src="MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
 </head>
 
 
@@ -49,24 +52,85 @@ Uses impress.js
 <!------------------------------------------------------------------------------------------------>
 
 
-	<div id="title" class="step" data-x="0" data-y="0" data-scale="1">
-		<h1> Title </h1>
+	<div id="Title" class="step" data-x="0" data-y="0" data-scale="1">
+		<h1> Chemical Rate Sensetivitys in Chemical Transport Models </h1>
 		<h4> By Ben Newsome </h4>
 		<h4> bn506@york.ac.uk </h4>
 	</div>
+<!--tts
+Welcome, I'm Ben and the title of my talk today is "Chemical Rate Sensetivities in Chemical Transport Modles".
+/tts-->
 
 <!------------------------------------------------------------------------------------------------>
-	<div id="Slide1" class="step" data-x="1000" data-y="0">
-		<h2> Title 1 </h2>
+	<div id="1" class="step" data-x="1000" data-y="0">
+		<h2> Intorduction </h2>
 		
 		<ul class="list">
-			<li class="substep"> A point. </li><br>
-			<li class="substep"> Another point. </li>
+			<li class="substep"> Rate constants are the backbone of a Chemical Transport Model. </li><br>
+			<li class="substep"> Errors in rate equation constants effect many outputs. </li>
 		</ul>
+<!--tts
+A quick Introduction.
+
+Rate constants are extreamly inportant in chemical reactions, so when simulating hundreds or thousands of reactions such as in a Atmospheric Chemistry Transport Model, (Or C.T.M.) , knowing these rate constants and their associated errorsis very inportant.
+By looking at how the rate equation constants effect the outputs of the models, information on where inprovements could be made can be provided for experemental research.
+/tts-->
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="2" class="step" data-x="2000" data-y="0">
+		<h2> Why do we care? </h2>
+		
+		<ul class="list">
+			<li> Atmospheric Models are useful for a veiety of reasons. </li><br>
+			<li class="substep"> Help decide policy. </li>
+			<li class="substep"> Affect human health and crop yields. </li>
+		</ul>
+<!--tts
+So why do we care?
+
+Atmospheric chemistry models are important for a veriety of reasons, each effecting us in different ways. They allow us to project and understand how different atmospheric constitutions relate to each other, and there outputs can tell us a veriety of usefull things.
+/tts-->
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="2.1" class="step" data-x="2000" data-y="0">
+		<h2> Surface Ozone </h2>
+		
+		<ul class="list">
+			<li> Surface Ozone levels directly effect us: </li><br>
+			<li class="substep"> Ozone is toxic to humans. </li>
+			<li class="substep"> Crop yields are reduced with high ozone levels. (insert reference on high surface ozone levels) </li>
+		</ul>
+
+<!--tts
+Surface Ozone is a very important field to know. As Ozone is toxic to humans, the levels that are on the surface of the earth are usefull to know. Crop yeilds are also dependent on Ozone, as it can kill the ?Stigmata and the hole brathy things in plants?.
+
+By understanding the dependencies of ozone surface levels on the rate constants, information on future scinarioes can be confined with more accuracy. Reasons for errors between experemental data and models could also try to be hinted at. 
+
+
+/tts-->
+
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="2.2" class="step" data-x="2000" data-y="0">
+		<h2> Ozone radiative forcing </h2>
+		
+		<ul class="list">
+			<li> Column Ozone levels can alter the planets temperature: </li><br>
+			<li class="substep"> Preindustrial models could depend differently upon rates. </li>
+			<li class="substep"> Expermiental Ozone data is not currently replicated in models. (reference) </li>
+		</ul>
+
+<!--tts
+Ozone is also inportant in models for its radiative forcing.
+
+Column ozone levels kjadshflgkjhsdlkjhsadflkj
+/tts-->
+
 
 	</div>
 <!------------------------------------------------------------------------------------------------>
-	<div id="Slide2" class="step" data-x="2000" data-y="0">
+	<div id="Slide20" class="step" data-x="2000" data-y="0">
 		<h2> An image </h2>
 		<div style="text-align:center">
 			<img src="Template/img/placeholder.png" width="800" height="600" alt="A Placeholder">
