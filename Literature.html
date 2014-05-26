@@ -38,6 +38,9 @@ Uses impress.js
 
 <body class="impress-not-supported">
 
+
+
+
 <div class="fallback-message">
 	<p> Your browser doesn't support the features required by impress.js, so you are presented with a simple version of the presentation. </p>
 </div>
@@ -58,6 +61,7 @@ Uses impress.js
 		<h4> bn506@york.ac.uk </h4>
 	</div>
 <!--tts
+Title
 Welcome, I'm Ben and the title of my talk today is "Chemical Rate Sensetivities in Chemical Transport Modles".
 /tts-->
 
@@ -70,6 +74,7 @@ Welcome, I'm Ben and the title of my talk today is "Chemical Rate Sensetivities 
 			<li class="substep"> Errors in rate equation constants effect many outputs. </li>
 		</ul>
 <!--tts
+Intorduction
 A quick Introduction.
 
 Rate constants are extreamly inportant in chemical reactions, so when simulating hundreds or thousands of reactions such as in a Atmospheric Chemistry Transport Model, (Or C.T.M.) , knowing these rate constants and their associated errorsis very inportant.
@@ -86,13 +91,32 @@ By looking at how the rate equation constants effect the outputs of the models, 
 			<li class="substep"> Affect human health and crop yields. </li>
 		</ul>
 <!--tts
-So why do we care?
+Why_do_we_care
+So why do we care?,
 
 Atmospheric chemistry models are important for a veriety of reasons, each effecting us in different ways. They allow us to project and understand how different atmospheric constitutions relate to each other, and there outputs can tell us a veriety of usefull things.
 /tts-->
+
+<button onclick="show_audio()"> Show Audio </button>
+
+<script>
+function show_audio() { 
+ var audio2;
+ audio2 = '<audio controls><source src="audio/Why_do_we_care.wav" type="audio/wav">Your browser does not support the audio element.</audio>'
+;  
+   document.getElementById("audio_2").innerHTML = audio2;
+}
+</script>
+
+<div id="audio_2">
+<!--<audio controls>
+<source src="audio\Why_do_we_care.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>-->
+</div>
 	</div>
 <!------------------------------------------------------------------------------------------------>
-	<div id="2.1" class="step" data-x="2000" data-y="0">
+	<div id="2.1" class="step" data-x="2000" data-y="1000">
 		<h2> Surface Ozone </h2>
 		
 		<ul class="list">
@@ -102,6 +126,7 @@ Atmospheric chemistry models are important for a veriety of reasons, each effect
 		</ul>
 
 <!--tts
+Surface_Ozone
 Surface Ozone is a very important field to know. As Ozone is toxic to humans, the levels that are on the surface of the earth are usefull to know. Crop yeilds are also dependent on Ozone, as it can kill the ?Stigmata and the hole brathy things in plants?.
 
 By understanding the dependencies of ozone surface levels on the rate constants, information on future scinarioes can be confined with more accuracy. Reasons for errors between experemental data and models could also try to be hinted at. 
@@ -112,7 +137,7 @@ By understanding the dependencies of ozone surface levels on the rate constants,
 	</div>
 
 <!------------------------------------------------------------------------------------------------>
-	<div id="2.2" class="step" data-x="2000" data-y="0">
+	<div id="2.2" class="step" data-x="2000" data-y="2000">
 		<h2> Ozone radiative forcing </h2>
 		
 		<ul class="list">
@@ -122,6 +147,7 @@ By understanding the dependencies of ozone surface levels on the rate constants,
 		</ul>
 
 <!--tts
+Ozone_radiative_forcing
 Ozone is also inportant in models for its radiative forcing.
 
 Column ozone levels kjadshflgkjhsdlkjhsadflkj
@@ -130,7 +156,7 @@ Column ozone levels kjadshflgkjhsdlkjhsadflkj
 
 	</div>
 <!------------------------------------------------------------------------------------------------>
-	<div id="Slide20" class="step" data-x="2000" data-y="0">
+	<div id="Slide20" class="step" data-x="2000" data-y="3000">
 		<h2> An image </h2>
 		<div style="text-align:center">
 			<img src="Template/img/placeholder.png" width="800" height="600" alt="A Placeholder">
