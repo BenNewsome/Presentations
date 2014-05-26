@@ -64,6 +64,8 @@ def create_mp3_tts(paragraphs,debug):
 #      tts_string=paragraphs[item].replace(' ','+')
 #      url = tts_url + tts_string[1:]
       wav_file_location = "audio/" + item + ".wav"
+      # Get around the tts engien not being able to understand '?'
+      paragraphs[item] = paragraphs[item].replace('?','.')
 
       if debug:
          print wav_file_location
