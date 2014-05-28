@@ -141,7 +141,7 @@ By understanding the dependencies of ozone surface levels on the rate constants,
 		<h2> Ozone radiative forcing </h2>
 		
 		<ul class="list">
-			<li> Column Ozone levels can alter the planets temperature: </li><br>
+			<li> Column Ozone levels can alter the planets temperature. </li><br>
 			<li class="substep"> Preindustrial models could depend differently upon rates. </li>
 			<li class="substep"> Expermiental Ozone data is not currently replicated in models. (reference) </li>
 		</ul>
@@ -156,14 +156,299 @@ Column ozone levels kjadshflgkjhsdlkjhsadflkj
 
 	</div>
 <!------------------------------------------------------------------------------------------------>
-	<div id="Slide20" class="step" data-x="2000" data-y="3000">
+	<div id="2.3" class="step" data-x="2000" data-y="3000">
+		<h2> Ozone radiative forcing </h2>
+		
+		<ul class="list">
+			<li> CH4 radiative forcing. </li><br>
+			<li class="substep"> Preindustrial models could depend differently upon rates. </li>
+			<li class="substep"> Point of contention in GCM's. </li>
+         <li class="substep"> Usefull for climate projections. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="2.4" class="step" data-x="2000" data-y="4000">
+		<h2> Acid deoposition. </h2>
+		
+		<ul class="list">
+			<li> Acid rain levels are usefull to know. </li><br>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="2.5" class="step" data-x="2000" data-y="5000">
+		<h2> Aerosol peramiters </h2>
+		
+		<ul class="list">
+			<li> Affect radiative forcing. </li><br>
+			<li class="substep"> Change meterology with CCN's. </li>
+			<li class="substep"> Causes change in wet deposition </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="3.0" class="step" data-x="3000" data-y="0000">
+		<h2> Method </h2>
+		
+		<ul class="list">
+			<li> Using a CTM. </li><br>
+			<li class="substep"> Discritise the world into boxes. </li>
+			<li class="substep"> Solve the chemistry and aerosol microphysics for the box. </li>
+         <li class="substep"> Transport from assimilated meterology. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="3.1" class="step" data-x="3000" data-y="1000">
+		<h2> Box Model </h2>
+		
+		<ul class="list">
+			<li> Similar to a single gridpoint in a CTM </li><br>
+			<li class="substep"> Much faster then a CTM as only one point. </li>
+			<li class="substep"> Doesn't reprisent the world, only a point. </li>
+         <li class="substep"> Previous work shows............ </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="3.2" class="step" data-x="3000" data-y="2000">
+		<h2> Global Climate Model </h2>
+		
+		<ul class="list">
+			<li> More complex then a CTM. </li><br>
+			<li class="substep"> Generates its own meterology. </li>
+			<li class="substep"> More dificult to diagnose the direct outputs. </li>
+         <li class="substep"> Reduced chemistry complexity. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="3.3" class="step" data-x="3000" data-y="3000">
+		<h2> Chemitry Transport Model </h2>
+		
+		<ul class="list">
+			<li> Offer complex chemistry without affecting meteorology </li><br>
+			<li class="substep"> Not too computationaly inefficient. </li>
+			<li class="substep"> Several Box models connected with transport. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="3.4" class="step" data-x="3000" data-y="4000">
+		<h2> Ahrenious equation </h2>
+		
+		<ul class="list">
+			<li> $$ k = A e^{-E_a / (k_B T)} $$ </li><br>
+			<li class="substep"> Empirically derived </li>
+			<li class="substep"> Error depends upon Temperature. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="3.5" class="step" data-x="3000" data-y="5000">
+		<h2> JPL/IUPAC </h2>
+		
+		<ul class="list">
+			<li> Rate constant source. </li><br>
+			<li class="substep"> Obtained from a veriety of references. </li>
+			<li class="substep"> Most accurate at the temperature of most experiments (298K). </li>
+         <li class="substep"> Many rates have several references, with sigma accuracies. </li>
+         <li class="substep"> Some have less then ideal sources, or even infered. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="4.0" class="step" data-x="4000" data-y="0000">
+		<h2> Methods of calculating the errors </h2>
+		
+		<ul class="list">
+			<li> Errors in the Rate equations affect the output </li><br>
+			<li class="substep"> Manualy change the rate constants and run the model. </li>
+			<li class="substep"> Create an emulator that can calculate dependencies. </li>
+         <li class="substep"> Nural network could be traind to link input to outputs. </li>
+         <li class-"substep"> Theory </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="4.1" class="step" data-x="4000" data-y="1000">
+		<h2> Brute Force </h2>
+		
+		<ul class="list">
+			<li> Manualy pertubate each rate constant. </li><br>
+			<li class="substep"> Requires very litle code change. </li>
+			<li class="substep"> Complete new run for every pertubation. </li>
+         <li class="substep"> Good science doesn't have to be efficient. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="4.2" class="step" data-x="4000" data-y="2000">
+		<h2> Emulation </h2>
+		
+		<ul class="list">
+			<li> Requires hundreds of runs. </li><br>
+			<li class="substep"> Can create a statistical probability of how each input changes outputs. </li>
+			<li class="substep"> Requires a lot of code to impliment </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="4.3" class="step" data-x="4000" data-y="3000">
+		<h2> Nural Netowrks </h2>
+		
+		<ul class="list">
+			<li> Requires lots of runs. </li><br>
+			<li class="substep"> Finds relations between the input and output. </li>
+			<li class="substep"> Requires many runs to train the network. </li>
+         <li class="substep"> Dificult to diagnose. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="4.4" class="step" data-x="4000" data-y="4000">
+		<h2> Theory </h2>
+		
+		<ul class="list">
+			<li> Look into this. </li><br>
+			<li class="substep"> Might only work for box models. </li>
+			<li class="substep"> Requires lots of work. </li>
+		</ul>
+
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="5.0" class="step" data-x="5000" data-y="0000">
+		<h2> Preliminary results </h2>
+		
+      <div style-"text-align:center">
+         <img src="Template/img/placeholder.png" width="800" height="600" alt="Some results">
+      </div>
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="5.1" class="step" data-x="5000" data-y="1000">
+		<h2> Expected results </h2>
+      
+      <ul class="list">
+         <li> Domimnated by a few important reactions </li>
+         <li class="substep"> Can find any important errors </li>
+      </ul>
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="5.2" class="step" data-x="5000" data-y="2000">
+		<h2> Summary </h2>
+      
+      <ul class="list">
+         <li> Rate euqations are important in CTM's </li>
+         <li class="substep"> Can effect many inportant things </li>
+         <li class="substep"> Some rate constants are not well known </li>
+         <li class="substep"> Understanding the input output relations is usefull for improvements </li>
+         <li class="substep"> Computationaly intensive </li>
+      </ul>
+<!--tts
+CH4_radiative_forcing
+/tts-->
+
+
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="6" class="step" data-x="6000" data-y="0000">
+		<h2> End </h2>
+      
+
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="img" class="step" data-x="9000" data-y="9000">
 		<h2> An image </h2>
 		<div style="text-align:center">
 			<img src="Template/img/placeholder.png" width="800" height="600" alt="A Placeholder">
 		</div>
 	</div>	
 <!------------------------------------------------------------------------------------------------>
-	<div id="overview" class="step" data-x="1000" data-y="0" data-scale="3" >
+	<div id="overview" class="step" data-x="3000" data-y="3000" data-scale="6" >
 	</div>
 
 <!------------------------------------------------------------------------------------------------>

@@ -23,9 +23,9 @@ Uses impress.js
 	<meta name="author" content="Ben Newsome" />
 
 <!--	<link rel="stylesheet" href="css/presentation.scc" />	-->
-	<link rel="stylesheet" href="Template/css/impress-demo.css" />
-	<link rel="stylesheet" href="Template/css/substep.css" />
-	<link rel="stylesheet" href="Template/css/impress-progress.css"> 
+	<link rel="stylesheet" href="../Template/css/impress-demo.css" />
+	<link rel="stylesheet" href="../Template/css/substep.css" />
+	<link rel="stylesheet" href="../Template/css/impress-progress.css"> 
 
 	<link rel="shortcut icon" href="icon.png" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -50,52 +50,32 @@ Uses impress.js
 
 
 	<div id="title" class="step" data-x="0" data-y="0" data-scale="1">
-		<h1> 2014-04-24 </h1>
+		<h1> Title </h1>
 		<h4> By Ben Newsome </h4>
 		<h4> bn506@york.ac.uk </h4>
 	</div>
 
 <!------------------------------------------------------------------------------------------------>
 	<div id="Slide1" class="step" data-x="1000" data-y="0">
-		<h2> Pertubating Rate reactions </h2>
+		<h2> Title 1 </h2>
 		
 		<ul class="list">
-			<li> Changed the rate reactions of O3+NO to look at the higher and lower pertubations of the reaction </li><br>
+			<li class="substep"> A point. </li><br>
+			<li class="substep"> Another point. </li>
 		</ul>
 
 	</div>
 <!------------------------------------------------------------------------------------------------>
 	<div id="Slide2" class="step" data-x="2000" data-y="0">
-		<h2> Ozone % change (Surface) </h2>
+		<h2> An image </h2>
 		<div style="text-align:center">
-			<img src="img/O3_Surface_Upper_Bound.png" width="600" height="300" alt="A Placeholder">
-			<img src="img/O3_Surface_Lower_Bound.png" width="600" height="300" alt="A Placeholder">
+			<img src="../Template/img/placeholder.png" width="800" height="600" alt="A Placeholder">
 		</div>
 	</div>	
 <!------------------------------------------------------------------------------------------------>
-	<div id="PAN" class="step" data-x="1000" data-y="1000" data-scale="1" >
-		<h2> PAN % change (Column) </h2>
-		<div style="text-align:center">
-			<img src="img/PAN_Column_Upper_Bound.png" width="600" height="300" alt="A Placeholder">
-			<img src="img/PAN_Column_Lower_Bound.png" width="600" height="300" alt="A Placeholder">
-		</div>
+	<div id="overview" class="step" data-x="1000" data-y="0" data-scale="3" >
 	</div>
 
-<!------------------------------------------------------------------------------------------------>
-	<div id="Vertical" class="step" data-x="2000" data-y="1000" data-scale="1" >
-		<h2> PAN % change (Column) </h2>
-		<div style="text-align:center">
-			<img src="img/Vertical_1.png" width="800" height="600" alt="A Placeholder">
-		</div>
-	</div>
-<!------------------------------------------------------------------------------------------------>
-	<div id="overview" class="step" data-x="2000" data-y="0" data-scale="4" >
-		<h2> Ozone % Change </h2>
-		<div style="text-align:center">
-			<img src="img/PAN_Column_Upper_Bound.png" width="600" height="400" alt="A Placeholder">
-			<img src="img/PAN_Column_Lower_Bound.png" width="600" height="400" alt="A Placeholder">
-		</div>
-	</div>
 <!------------------------------------------------------------------------------------------------>
 </div>
 
@@ -113,8 +93,8 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 
-<script src="Template/js/impress-progress.js"></script>
-<script src="Template/js/impress.js"></script>
+<script src="../Template/js/impress-progress.js"></script>
+<script src="../Template/js/impress.js"></script>
 <script>impress().init();</script>
 
 </body>

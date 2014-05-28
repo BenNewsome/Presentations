@@ -1,0 +1,146 @@
+<!doctype html>
+
+<!--
+
+This is a presentation for ES4. It is planed to be a poster with areas that can be zoomed in on and then talked about.
+Uses impress.js
+
+-->
+
+<!------------------------------------------------------------------------>
+
+
+<!-- The first section of this sets up most of the backing of the presentation. -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title> Presentation | By Ben Newsome </title>
+
+	<meta name="description" content="A presentation on my project with the use of impress.js"/>
+	<meta name="author" content="Ben Newsome" />
+
+<!--	<link rel="stylesheet" href="css/presentation.scc" />	-->
+	<link rel="stylesheet" href="../Template/css/impress-demo.css" />
+	<link rel="stylesheet" href="../Template/css/substep.css" />
+	<link rel="stylesheet" href="../Template/css/impress-progress.css"> 
+
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+	<p> Your browser doesn't support the features required by impress.js, so you are presented with a simple version of the presentation. </p>
+</div>
+
+
+
+<div class="progressbar"></div><div></div>
+<!--<div class="progress"></div>-->
+
+<div id="impress">
+
+<!------------------------------------------------------------------------------------------------>
+
+
+	<div id="title" class="step" data-x="0" data-y="0" data-scale="1">
+		<h1> 2014-05-29 </h1>
+		<h4> By Ben Newsome </h4>
+		<h4> bn506@york.ac.uk </h4>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="gfortran" class="step" data-x="1000" data-y="0">
+		<h2> Spent the weekend playing with gfortran and GEOS-Chem.</h2>
+		
+		<ul class="list">
+			<li class="substep"> It is currently compiled, but falls over on the bpch read. </li>
+			<li class="substep"> There are A LOT of things which are warnings acording to gfortran, and rightly so.</li>
+         <li class="substep"> Had to fix several LOGICAL=INTEGER and vice verser. And there were some questionable boolian operators in there.</li>
+         <li class="substep"> This could give a different look into where things could be optimised. (But was so far for fun). </li>
+		</ul>
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+   <div id="Joke" class="step" data-x="1000" data-y="1000">
+      <h2> Joke.</h2>
+      <p>
+A wife asks her husband, a computer programmer; "Could you please go to the store for me and buy one carton of milk, and if they have eggs, get 6!"
+
+A short time later the husband comes back with 6 cartons of milk.
+
+The wife asks him, "Why the hell did you buy 6 cartons of milk?"
+
+He replied, "They had eggs."
+
+      </p>
+   </div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="TTS" class="step" data-x="2000" data-y="0">
+		<h2> Also looked at tts...</h2>
+      <ul class="list">
+         <li> This was more for so people can access notes from a presentation. </li>
+         <li> Was more fun then usefull </li>
+      </ul>
+      <button onclick="show_audio()"> Show Audio </button>
+
+      <div id="audio_2"></div>
+
+<!--tts
+More_fun_then_use
+This is an example of text to speech. It is an ofline compilation of the comments in the H T M L code. What do you think?
+/tts-->
+
+<script>
+function show_audio() { 
+   document.getElementById("audio_2").innerHTML ='<audio controls><source src="../audio/More_fun_then_use.wav" type="audio/wav">Your browser does not support the audio element.</audio>';
+}
+</script>
+
+	</div>
+<!------------------------------------------------------------------------------------------------>
+	<div id="Some_Science" class="step" data-x="5000" data-y="0">
+		<h2> Some_Science </h2>
+      <p> Finished some runs with rate constant pertubations using TOMAS15 Aerosols. </p>
+		<div style="text-align:center">
+			<img src="../Template/img/placeholder.png" width="800" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="overview" class="step" data-x="1000" data-y="0" data-scale="3" >
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+</div>
+
+<!--
+The following should all be at the bottom and nothing below here should need changing
+-->
+<div class="hint">
+        <p> Use a spacebar or arrow keys to navigate </p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="../Template/js/impress-progress.js"></script>
+<script src="../Template/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+          
+		
+
+
+
