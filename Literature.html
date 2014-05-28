@@ -39,6 +39,17 @@ Uses impress.js
 <body class="impress-not-supported">
 
 
+<!-- Script for grabbing the audio -->
+<script>
+function show_audio(input) { 
+   var filename = input.name
+   var audio_start = '<audio controls><source src="audio/';
+   var audio_end = '.wav" type="audio/wav">Your browser does not support the audio element.</audio>';
+   var audio = audio_start + filename + audio_end;
+   document.getElementById(filename+'_audio').innerHTML = audio;
+}
+</script>
+
 
 
 <div class="fallback-message">
@@ -55,7 +66,7 @@ Uses impress.js
 <!------------------------------------------------------------------------------------------------>
 
 
-	<div id="Title" class="step" data-x="0" data-y="0" data-scale="1">
+	<div id="Title" class="step"data-x="0" data-y="0" data-scale="1">
 		<h1> Chemical Rate Sensetivitys in Chemical Transport Models </h1>
 		<h4> By Ben Newsome </h4>
 		<h4> bn506@york.ac.uk </h4>
@@ -97,18 +108,10 @@ So why do we care?,
 Atmospheric chemistry models are important for a veriety of reasons, each effecting us in different ways. They allow us to project and understand how different atmospheric constitutions relate to each other, and there outputs can tell us a veriety of usefull things.
 /tts-->
 
-<button onclick="show_audio()"> Show Audio </button>
+<!--<button onclick="show_audio({name:'Why_do_we_care'})"> Show Audio </button>-->
 
-<script>
-function show_audio() { 
- var audio2;
- audio2 = '<audio controls><source src="audio/Why_do_we_care.wav" type="audio/wav">Your browser does not support the audio element.</audio>'
-;  
-   document.getElementById("audio_2").innerHTML = audio2;
-}
-</script>
 
-<div id="audio_2">
+<div id="Why_do_we_care_audio">
 <!--<audio controls>
 <source src="audio\Why_do_we_care.wav" type="audio/wav">
 Your browser does not support the audio element.
@@ -125,6 +128,12 @@ Your browser does not support the audio element.
 			<li class="substep"> Crop yields are reduced with high ozone levels. (insert reference on high surface ozone levels) </li>
 		</ul>
 
+      <p class="reference">
+      A background on the future <br>
+      bob et al (9999)   
+      </p>
+	</div>
+
 <!--tts
 Surface_Ozone
 Surface Ozone is a very important field to know. As Ozone is toxic to humans, the levels that are on the surface of the earth are usefull to know. Crop yeilds are also dependent on Ozone, as it can kill the ?Stigmata and the hole brathy things in plants?.
@@ -134,8 +143,7 @@ By understanding the dependencies of ozone surface levels on the rate constants,
 
 /tts-->
 
-	</div>
-
+   
 <!------------------------------------------------------------------------------------------------>
 	<div id="2.2" class="step" data-x="2000" data-y="2000">
 		<h2> Ozone radiative forcing </h2>
@@ -313,7 +321,7 @@ CH4_radiative_forcing
 			<li class="substep"> Manualy change the rate constants and run the model. </li>
 			<li class="substep"> Create an emulator that can calculate dependencies. </li>
          <li class="substep"> Nural network could be traind to link input to outputs. </li>
-         <li class-"substep"> Theory </li>
+         <li class="substep"> Theory </li>
 		</ul>
 
 <!--tts

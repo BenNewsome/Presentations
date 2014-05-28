@@ -167,10 +167,29 @@ h4 {
 }
 
 h5 {
-	color:	black;
+	color:	red;
 	font-size:	40%;
-	tect-align:	left
+	text-align:	left
 }
+
+/* Reference */
+h6 {
+   color:   black;
+   font-size: 30%;
+   text-align: right;
+}
+
+.reference
+{
+width:   100%;
+font-size:  30%;
+color:   black;
+text-align: right;
+height:  100%;
+position:   absolute;
+bottom:  100;
+}
+
 
 .alignleft {
 	float:	left;
