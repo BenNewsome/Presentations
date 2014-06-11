@@ -1,0 +1,126 @@
+<!doctype html>
+
+<!--
+
+This is a presentation for ES4. It is planed to be a poster with areas that can be zoomed in on and then talked about.
+Uses impress.js
+
+-->
+
+<!------------------------------------------------------------------------>
+
+
+<!-- The first section of this sets up most of the backing of the presentation. -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<title> Presentation | By Ben Newsome </title>
+
+	<meta name="description" content="A presentation on my project with the use of impress.js"/>
+	<meta name="author" content="Ben Newsome" />
+
+<!--	<link rel="stylesheet" href="css/presentation.scc" />	-->
+	<link rel="stylesheet" href="../Template/css/impress-demo.css" />
+	<link rel="stylesheet" href="../Template/css/substep.css" />
+	<link rel="stylesheet" href="../Template/css/impress-progress.css"> 
+
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+	<p> Your browser doesn't support the features required by impress.js, so you are presented with a simple version of the presentation. </p>
+</div>
+
+
+
+<div class="progressbar"></div><div></div>
+<!--<div class="progress"></div>-->
+
+<div id="impress">
+
+<!------------------------------------------------------------------------------------------------>
+
+
+	<div id="title" class="step" data-x="0" data-y="0" data-scale="1">
+		<h1> 2014-06-11 </h1>
+		<h4> By Ben Newsome </h4>
+		<h4> bn506@york.ac.uk </h4>
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+	<div id="Surface_Ozone" class="step" data-x="1000" data-y="0">
+		<h2> Surface Ozone </h2>
+		<div style="text-align:center">
+			<img src="../img/Surface_Ozone_default.png" width="800" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="Negative_surface_Ozone" class="step" data-x="1000" data-y="1000">
+		<h2> Negative pertubation </h2>
+		<div style="text-align:center">
+			<img src="../img/Negative_Surface_Ozone_difference.png" width="800" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="Dobson" class="step" data-x="2000" data-y="0">
+		<h2> Tropospheric Ozone </h2>
+		<div style="text-align:center">
+			<img src="../img/Dobson_default.png" width="800" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="Negative_Dobson" class="step" data-x="2000" data-y="1000">
+		<h2> Negative Pertubation </h2>
+		<div style="text-align:center">
+			<img src="../img/Negative_Ozone_Dobson_difference.png" width="800" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="Box_Plot" class="step" data-x="3000" data-y="0000">
+		<h2> Box Plot </h2>
+		<div style="text-align:center">
+			<img src="../img/Surface_Ozone_Boxplot.png" width="200" height="600" alt="A Placeholder">
+			<img src="../img/Surface_NO_Boxplot.png" width="200" height="600" alt="A Placeholder">
+			<img src="../img/Surface_SO4_Boxplot.png" width="200" height="600" alt="A Placeholder">
+		</div>
+	</div>	
+<!------------------------------------------------------------------------------------------------>
+	<div id="overview" class="step" data-x="1000" data-y="0" data-scale="3" >
+	</div>
+
+<!------------------------------------------------------------------------------------------------>
+</div>
+
+<!--
+The following should all be at the bottom and nothing below here should need changing
+-->
+<div class="hint">
+        <p> Use a spacebar or arrow keys to navigate </p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="../Template/js/impress-progress.js"></script>
+<script src="../Template/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+          
+		
+
+
+
